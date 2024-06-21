@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App UI</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-container {
+            position: relative;
+            width: 375px; /* Width of a typical mobile device */
+            height: 812px; /* Height of a typical mobile device */
+            overflow: hidden;
+            border-radius: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background-color: #1e1e1e;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            border-bottom: 1px solid #444;
+        }
+
+        .navbar h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .navbar button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            height: calc(100% - 60px); /* Adjust height to exclude navbar */
+        }
+
+        .video-section {
+            text-align: center;
+        }
+
+        .video-preview {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .video-preview img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 30px;
+            border-radius: 50%;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .input-container {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            border: none;
+            text-align: center;
+            background-color: #444;
+            color: white;
+        }
+
+        .slider-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .slider-container p {
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .slider-container input[type="range"] {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .slider-container button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="navbar">
+            <button>&#9776;</button>
+            <h1>App Móvil</h1>
+            <button>&#x2630;</button>
+        </div>
+        <div class="content">
+            <div class="video-preview">
+                <img src="https://via.placeholder.com/350x200" alt="Video Preview">
+                <button class="play-button">&#9654;</button>
+            </div>
+            <div class="input-container">
+                <input type="text" placeholder="video">
+                <input type="text" placeholder="Creation">
+                <input type="text" placeholder="Location">
+            </div>
+            <div class="slider-container">
+                <p>Use to create a form parameter based on the button need.</p>
+                <input type="range" min="0" max="100">
+                <button>Up</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
